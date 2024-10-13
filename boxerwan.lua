@@ -12,6 +12,14 @@ else
     warn("Pizza Slicer ClickDetector or Detector not found.")
 end
 
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.Head.face,
+    [2] = "rbxasset://textures/face.png"
+}
+and
+     workspace.Main.ChangeFace:FireServer(unpack(args))
+end
+
 local animationStartedEvent = workspace:FindFirstChild("Animation") and workspace.Animation:FindFirstChild("AnimationStarted")
 if animationStartedEvent then
     local args = { [1] = "ToolHold" }
